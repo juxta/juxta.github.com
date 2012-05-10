@@ -1,136 +1,146 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<title>Juxta - MySQL management tool</title>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<style type="text/css">
-body{
-	background-color: #f6f6f6;
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	}
-.clear{
-	clear: both;
-	}
-img{
-	border: 0;
-	}
-
-#page{
-	margin: 0 auto;
-	padding: 55px 0 25px 0;
-	width: 672px;
-	}
-.footer{
-	color: #999;
-	font-size: 11px;
-	text-align: center;
-	}
-	
-h1{
-	margin-bottom: 50px;
-	}
-
-a{
-	color: #36c;
-	}
-.links a{
-	background-color: #36c;
-	color: #fff;
-	text-decoration: none;
-	}
-.links a:hover{
-	background: none;
-	color: #36c;
-	}
-
-ul.screenshots{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	}
-.screenshots li{
-	float: left;
-	margin: 0 11px 21px 0;
-	width: 157px;
-	height: 100px;
-	}
-.screenshots li a,
-.screenshots li a img{
-	float: left;
-	}
-.screenshots li a{
-	width: 157px;
-	height: 100px;
-	background: transparent url('images/157x100-shadow.png') top left no-repeat;
-	padding: 3px 0 0 3px;
-	}
-.screenshots a.x126{
-	width: 98px;
-	height: 126px;
-	background-image: url('images/101x126-shadow.png');
-	margin: -26px 28px 0;
-	}
-.screenshots a.x134{
-	height: 134px;
-	background-image: url('images/157x134-shadow.png');
-	margin: -34px 0 0;
-	}
-.screenshots a.x103{
-	height: 103px;
-	background-image: url('images/157x103-shadow.png');
-	margin: -3px 0 0;
-	}
-.screenshots a.x99{
-	height: 99px;
-	background-image: url('images/157x99-shadow.png');
-	margin-top: 1px;
-	}
-.screenshots .last{
-	margin-right: 0;
-	}
-.screenshots li.third{
-	margin-top: 34px;
-	}
-</style>
+	<title>Juxta for MySQL</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin&effect=smoothing' rel='stylesheet'>
+	<script src="jquery-1.7.1.min.js"></script>
+	<link rel="stylesheet" href="fotorama.css" />
+	<script src="fotorama.js"></script>
 </head>
 <body>
-	<div id="page">
-		<h1>
-			<span style="background-color: #36c; color: #fff;">Juxta</span>
-			<span style="font-size: 12px; font-weight: normal;"> for MySQL</span>
-		</h1>
-		<ul class="screenshots">
-			<li><a href="images/juxta-show-databases.png"><img src="images/juxta-show-databases-thumb.png" title="Databases" width=151 height=94 /></a></li>
-			<li><a class="x99" href="images/juxta-create-database.png"><img src="images/juxta-create-database-thumb.png" title="Create Database" width=151 height=93 /></a></li>
-			<li><a href="images/juxta-users.png"><img src="images/juxta-users-thumb.png" title="Users" width=151 height=94 /></a></li>
-			<li><a class="x126 last" href="images/juxta-add-user.png"><img src="images/juxta-add-user-thumb.png" title="Add User" width=95 height=120 /></a></li>
-			
-			<li><a href="images/juxta-server-status.png"><img src="images/juxta-server-status-thumb.png" title="Server status" width=151 height=94 /></a></li>
-			<li><a href="images/juxta-backup.png"><img src="images/juxta-backup-thumb.png" title="Backup" width=151 height=94 /></a></li>
-			<li><a href="images/juxta-tables.png"><img src="images/juxta-tables-thumb.png" title="Tables" width=151 height=94 /></a></li>
-			<li class="last"><a href="images/juxta-views.png"><img src="images/juxta-views-thumb.png" title="Views" width=151 height=94 /></a></li>
-			
-			<li class="third"><a class="x134" href="images/juxta-edit-view.png"><img src="images/juxta-edit-view-thumb.png" title="Edit View" width=151 height=128 /></a></li>
-			<li class="third"><a href="images/juxta-triggers.png"><img src="images/juxta-triggers-thumb.png" title="Triggers" width=151 height=94 /></a></li>
-			<li class="third"><a href="images/juxta-table-structure.png"><img src="images/juxta-table-structure-thumb.png" title="Table Structure" width=151 height=94 /></a></li>
-			<li class="third last"><a class="x103" href="images/juxta-connect-to.png"><img src="images/juxta-connect-to-thumb.png" title="Connecto to MySQL Server" width=151 height=97 /></a></li>
-		</ul><br class="clear"/>
-		<p class="links"><a href="http://github.com/juxta/juxta">juxta on github</a></p><br/>
-		<p class="footer">&copy; 2010 <a href="http://alexeygolovnya.ru/">Alexey Golovnya</a></p>
-	</div>
-	<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-4345590-7']);
-	_gaq.push(['_trackPageview']);
+	<style>
+		html {
+			background-color: #FFF;
+			}
+		body {
+			width: 960px;
+			margin: 0 auto;
+			height: 100%;
+			}
+		h1 {
+			color: #333;
+			font-family: 'Open Sans', arial, sans-serif;
+			font-weight: bold;
+			font-size: 42px;
+			padding: 0;
+			margin-top: 60px;
+			margin-bottom: 21px;
+			height: 38px;
+			}
+		.h2 {
+			color: #666;
+			font-family: 'Open Sans', arial, sans-serif;
+			margin-top: 0;
+			margin-bottom: 55px;
+			font-size: 14px;
+			}
+		.fotorama__thumbs {
+			margin-top: 10px;
+			}
+		.fotorama__thumb__dot {
+			background-color: #CCC;
+			}
 
-	(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	})();
+		.footer {
+			//border-top: #DDD 1px solid;
+			font-family: 'Open Sans', arial, sans-serif;
+			font-size: 13px;
+			margin-top: 28px;
+			margin-bottom: 28px;
+			text-align: center;
+			}
+			
+		.github-btton {
+			height: 29px;
+			margin-top: -93px;
+			position: relative;
+			width: 155px;
+			float: right;
+			font-family: arial;
+			font-size: 14px;
+			}
+		.github-btton .button {
+			border: #CCC 1px solid;
+			border-radius: 3px;
+			padding: 3px 7px;
+			color: #333;
+			box-shadow: rgba(0,0,0, 0.1) 0 1px 1px;
+			background: url(https://github.com/favicon.ico) 4px center no-repeat;
+			padding-left: 23px;
+			text-decoration: none;
+			}
+		.github-btton .button:hover {
+			box-shadow: rgba(0,0,0, 0.20) 0 1px 2px;
+			cursor: pointer;
+			}
+	</style>
+
+	<h1>Juxta</h1>
+	<p class="h2">The fast web application for working with MySQL</p>
+
+	<div class="github-btton">
+		<a class="button" href="https://github.com/juxta/juxta">Watch</a> on Github
+	</div>
+
+	<div id="screenshots" >
+		<img src="screenshots/connect-to.png" />
+		<img src="screenshots/databases.png" />
+		<img src="screenshots/server-status.png" />
+		<img src="screenshots/tables.png" />
+		<img src="screenshots/procedure.png" />
+	</div>
+
+	<div class="footer">© 2012 <a href="http://alexeygolovnya.ru">Alexey Golovnya</a></div>
+
+	<script>
+		$(document).ready(function() {
+
+			var screenshots = $('#screenshots'),
+				image = 0,
+				size = screenshots.length;
+
+			screenshots.fotorama({
+				width: 960,
+				height: 540,
+				arrows: false,
+				loop: true,
+				background: '#F9F9F9',
+				shadows: false,
+				margin: 1,
+				nav: 'dots',
+				onShowImg: function(data) {
+					image = data.index;
+				}
+			});
+
+			$(document.body).keydown(function (event) {
+				var index;
+				if (event.keyCode === 37) {
+					index = image - 1;
+				} else if (event.keyCode === 39) {
+					index = image + 1;
+				}
+
+				if (index !== undefined) {
+					screenshots.trigger('showimg', index);
+				}
+			});
+
+		});
 	</script>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-4345590-7']);
+		_gaq.push(['_trackPageview']);
+	
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
 </body>
 </html>
-
