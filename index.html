@@ -43,7 +43,6 @@
 			}
 
 		.footer {
-			//border-top: #DDD 1px solid;
 			font-family: 'Open Sans', arial, sans-serif;
 			font-size: 13px;
 			margin-top: 28px;
@@ -51,7 +50,7 @@
 			text-align: center;
 			}
 			
-		.github-btton {
+		.github-button {
 			height: 29px;
 			margin-top: -93px;
 			position: relative;
@@ -60,7 +59,7 @@
 			font-family: arial;
 			font-size: 14px;
 			}
-		.github-btton .button {
+		.github-button .button {
 			border: #CCC 1px solid;
 			border-radius: 3px;
 			padding: 3px 7px 3px 28px;
@@ -69,17 +68,22 @@
 			background: url(https://github.com/favicon.ico) 4px center no-repeat;
 			background-size: 20px;
 			text-decoration: none;
-			}
-		.github-btton .button:hover {
-			box-shadow: rgba(0,0,0, 0.20) 0 1px 2px;
 			cursor: pointer;
+			}
+		.github-button .button:hover {
+			box-shadow: rgba(0,0,0, 0.20) 0 1px 2px;
+			}
+		.github-button .button:active {
+			box-shadow: inset 0 0 3px rgba(0,0,0, 0.20);
+			background-color: #F9F9F9;
+			border-top: #BBB 1px solid;
 			}
 	</style>
 
 	<h1>Juxta</h1>
 	<p class="h2">The fast web application for working with MySQL</p>
 
-	<div class="github-btton">
+	<div class="github-button">
 		<a class="button" href="https://github.com/juxta/juxta">Watch</a> on Github
 	</div>
 
@@ -140,7 +144,6 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>
-
 
 </body>
 </html>
